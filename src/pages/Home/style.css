@@ -1,0 +1,21 @@
+body{
+    background: rgba(0, 0, 0, 0.76);
+}
+.btn_agendarAgora{
+    background: transparent !important;
+    border: 1px solid white !important;
+    transition: 0.2s;
+    width: 200px;
+    border-radius: 15px;
+    padding: 9px 15px 9px 5px;
+    /* top = 10px | right = 15px | bottom = 20px | left = 5px */
+    transition: all 0.4s ease; /* transição mais suave e consistente */
+
+    font-weight: 450;
+}
+.btn_agendarAgora:hover {
+    background: rgba(255, 255, 255, 0.31) !important;
+    transform: translateY(-1px); /* leve efeito de elevação */
+
+
+}

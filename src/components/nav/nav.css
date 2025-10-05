@@ -1,0 +1,47 @@
+/* BTN AGENDAR*/
+.btn_agendar {
+    background: transparent !important;
+    border: 1px solid white !important;
+    transition: 0.2s;
+}
+.btn_agendar:hover {
+    background: rgba(255, 255, 255, 0.31) !important;
+    transform: translateY(-1px);
+}
+
+
+/* TOGGLE */
+.btn_toggle{
+    border: none !important;
+    color: #ffffff !important;
+    filter: invert(1) !important;
+}
+.btn_toggle:focus {
+    box-shadow: none;
+}
+.btn_toggle:not(.collapsed) .navbar-toggler-icon {
+    background-image: url('src/assets/btnToggleX.png');
+    width: 35px;
+    filter: invert(1) !important;
+}
+
+
+/* NAV BAR */
+.navItem {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.navItem .nav-link {
+    color: rgba(212, 202, 202, 0.76);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 14px;
+}
+.navItem .nav-link:hover {
+    color: #ffffff;
+}
+.navItem .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 600;
+}
