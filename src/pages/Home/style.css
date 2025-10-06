@@ -1,21 +1,66 @@
 body{
-    background: rgba(0, 0, 0, 0.76);
+    background: #ffffff;
+
+}
+.imagemFundo{
+    max-height: 80vh;
+    min-height: 70vh;
+    filter: brightness(90%);
+    border: 0 !important;
 }
 .btn_agendarAgora{
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(5px);
     border: 1px solid white !important;
     transition: 0.2s;
     width: 200px;
     border-radius: 15px;
     padding: 9px 15px 9px 5px;
-    /* top = 10px | right = 15px | bottom = 20px | left = 5px */
-    transition: all 0.4s ease; /* transição mais suave e consistente */
+
+    transition: all 0.4s ease;
 
     font-weight: 450;
 }
 .btn_agendarAgora:hover {
     background: rgba(255, 255, 255, 0.31) !important;
-    transform: translateY(-1px); /* leve efeito de elevação */
+    transform: translateY(-1px);
+}
 
+
+.tituloServico{
+    text-align: center;
+    padding-bottom: 1rem;
 
 }
+
+/* Container da paginação */
+.swiper-pagination {
+    position: relative !important;
+    bottom: auto !important;
+    background-color: transparent;
+    margin-top: 4px;
+}
+
+/* Bolinhas normais */
+.swiper-pagination-bullet {
+    background-color: #555555 !important;
+    opacity: 0.7 !important;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px !important;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Bolinha ativa */
+.swiper-pagination-bullet-active {
+    background-color: #000000 !important;
+    opacity: 1 !important;
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
