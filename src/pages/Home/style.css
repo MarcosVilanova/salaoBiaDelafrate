@@ -1,35 +1,85 @@
-body{
+body {
     background: #ffffff;
-
 }
-.imagemFundo{
+.card{
+    height: 100%;
+    border: none;
+}
+.imagemFundo {
     max-height: 80vh;
     min-height: 70vh;
-    filter: brightness(90%);
+    filter: brightness(15%);
     border: 0 !important;
-}
-.btn_agendarAgora{
-    background: rgba(0, 0, 0, 0.6) !important;
-    backdrop-filter: blur(5px);
-    border: 1px solid white !important;
-    transition: 0.2s;
-    width: 200px;
-    border-radius: 15px;
-    padding: 9px 15px 9px 5px;
-
-    transition: all 0.4s ease;
-
-    font-weight: 450;
-}
-.btn_agendarAgora:hover {
-    background: rgba(255, 255, 255, 0.31) !important;
-    transform: translateY(-1px);
+    object-fit: cover;  object-position: center center; /* faz começar do canto superior esquerdo */
 }
 
+.btn_agendarAgora {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
 
-.tituloServico{
+.btn_agendarAgora:hover,
+.btn_agendarAgora:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+
+
+
+.btn_agendarLS {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn_agendarLS:hover,
+.btn_agendarLS:focus{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+
+
+.tituloServico {
     text-align: center;
     padding-bottom: 1rem;
+    font-weight: 500;
+    color: #ada8a8 !important;
+    font-family: 'Playfair Display', serif;
 
 }
 
@@ -58,9 +108,32 @@ body{
     transform: scale(1.3);
 }
 
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
 
+.card-text{
+    font-family: 'Open Sans', sans-serif
+}
 
+.imagemBia{
+  border-radius: 3%;
+    border: 1px solid rgba(0, 0, 0);
 
+}
 
+.sla{
+    width: 200px;
+    display: flex;
 
+    justify-self: center;
+    margin-bottom: 10px;
+}
 
+.sobre{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    color: #ada8a8 !important;
+    font-family: 'Playfair Display', serif;
+}

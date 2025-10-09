@@ -3,5 +3,5 @@
     justify-content: center; /* centraliza horizontalmente os itens */
     padding-top: 10rem !important;
     color: white;
-    font: bold 30px "Roboto", sans-serif;
+    font: bold 30px "Roboto", sans-serif;  background-color: black;
 }

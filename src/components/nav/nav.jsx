@@ -1,21 +1,24 @@
+// React Router
 import { NavLink } from "react-router-dom";
+// Bootstrap
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
-import './nav.css';
+// Estilos e imagem
+import "./nav.css";
 import Logo from "../../assets/Logo.png";
 
 function NavComponent() {
     return (
-        <Navbar expand="md" className="fixed-top navItem">
+        <Navbar expand="md" className="fixed-top navFundo">
             <Container>
                 {/* Logo */}
                 <Navbar.Brand as={NavLink} to="/">
-                    <img src={Logo} alt="Logo" className="ms-2 ms-md-0" style={{ height: "70px" }} />
+                    <img src={Logo} alt="Logo" className="ms-2 ms-md-0" style={{ height: "70px" }}/>
                 </Navbar.Brand>
 
-                {/* Toggle para mobile */}
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="btn_toggle" />
+                {/* Botão do menu mobile */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="btn_toggle"/>
 
-                {/* Links da Navbar */}
+                {/* Links da navbar */}
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto align-items-center">
                         <Nav.Link as={NavLink} to="/" end>
@@ -28,8 +31,8 @@ function NavComponent() {
                             Produtos
                         </Nav.Link>
 
-                        {/* Botão da Navbar */}
-                        <Button href="#" target="_blank" className="ms-md-4 btn_agendar">
+                        {/* Botão Agendar */}
+                        <Button href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" className="ms-md-4 btn_agendar">
                             Agendar
                         </Button>
                     </Nav>
