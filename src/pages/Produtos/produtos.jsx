@@ -4,7 +4,7 @@ function Produtos() {
 
     return (
         <>
-            <div className={"Produtos"}>Pagina Produtos</div>
+
         </>
     )
 }
