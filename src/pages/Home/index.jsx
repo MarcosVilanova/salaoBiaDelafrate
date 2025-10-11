@@ -14,22 +14,44 @@ import LogoPreta from "../../assets/LogoPreta.png";
 import { Button, Card, Row, Col, Container} from "react-bootstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";// ANIMAÇÕES E SWIPER
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 function Home() {
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     const dataSlideServicos = [
-        { id: 1, image: servico01, title: "Alisamento" },
-        { id: 2, image: servico02, title: "Corte" },
-        { id: 3, image: servico03, title: "Escova modelada" },
-        { id: 4, image: servico04, title: "Hidratação" },
+        { id: 1, image: servico01, title: "Alisamento" , alt: "Serviço de alisamento capilar profissional"},
+        { id: 2, image: servico02, title: "Corte", alt: "Serviço de corte capilar profissional" },
+        { id: 3, image: servico03, title: "Escova modelada", alt: "Serviço de escova modelada capilar profissional" },
+        { id: 4, image: servico04, title: "Hidratação", alt: "Serviço de hidratação capilar profissional" },
     ];
+
+const dataSlideComentarios = [
+{ id: 1, nome: "Geisibel Paulino", estrela: "⭐⭐⭐⭐⭐",  comentario: "O trabalho dela é impecável, não troco por nenhuma outra, a dona do Liso perfeitooo tem nome Bia Delefrate, super indico!"},
+{ id: 2, nome: "Jéssica Bolsoni", estrela: "⭐⭐⭐⭐⭐", comentario: "A melhor de Barretos, com certeza!!! Entrega realmente o liso perfeito. Salão acolhedor, profissionais maravilhosas, tanto no cabelo, quanto na unha e sobrancelha também. Elas arrasam"},
+{ id: 3, nome: "Jessica Borges",  estrela: "⭐⭐⭐⭐⭐", comentario: "Ambiente aconchegante, atendimento maravilhoso e a bia é uma excelente profissional, com certeza voltarei mais vezes e indico pra todas minhas amigas . Aqui somos muitoooo bem tratadas"},
+{ id: 4, nome: "Tamires Xavier",  estrela: "⭐⭐⭐⭐⭐",  comentario: "Ambiente acolhedor.... cafezinho na mão hahaha.. muitas risadas. Alisamento impecável, meu cabelo natural é bem cacheado e a Bia deixou lisérrimo. Amei."},
+{ id: 5, nome: "Jeniffer Oliveira",  estrela: "⭐⭐⭐⭐⭐",  comentario: "Uma experiência maravilhosa, um ambiente gostoso de se estar ao qual você da muitas risadas, fora o trabalho maravilhoso não troco por nada, estão de parabéns desde ao atendimento até os produtos de qualidade"},
+{ id: 6, nome: "Dayse Santos",  estrela: "⭐⭐⭐⭐⭐",  comentario: "A Bia é Maravilhosa, uma profissional Ímpar, atendimento top! O trabalho dela é profissionalismo conquistou meu coração! "},
+{ id: 7, nome: "Gabyy Pereira", estrela: "⭐⭐⭐⭐⭐", comentario: "Eu fui muito bem recepcionada, a Bia arrasa muito sem dúvidas. Agora estou livre da chapinha!"},
+{ id: 8, nome: "Francine SilvSilva",estrela: "⭐⭐⭐⭐⭐", comentario: "O melhor atendimento que já tive muito atenciosa o serviço excepcional não tenho nada pra reclamar só a agradecer pelo carinho"},
+{ id: 9, nome: "Ana Carolina Alves Barbosa", estrela: "⭐⭐⭐⭐⭐", comentario: "Excelente atendimento\n Profissional nota mil não troco por nada\n Especialista em alisamento"},
+    ];
+
 
     return (
         <>
             {/* INICIO */}
             <section className="card cardInicio">
                 <img src={imagemSalao} className="imagemSalao" alt="Imagem de de fundo do salão"/>
-                <div className="card-img-overlay d-flex flex-column justify-content-center container mt-5">
+                <div className="card-img-overlay d-flex flex-column justify-content-center container mt-5 cardCentral"  data-aos="fade-right">
                     <h1 className="card-title display-2" >
                         Seu cabelo,<span className="d-block d-md-inline"> sua confiança</span>
                     </h1>
@@ -50,11 +72,12 @@ function Home() {
 
 
             {/* SERVIÇOS */}
-            <Container className="mt-4" style={{paddingBottom:'20px'}}>
+            <Container className="mt-4" style={{paddingBottom:'20px',borderLeft: "2px solid #dcdcdc", borderRight: "2px solid #dcdcdc"}}  data-aos="fade-up">
                 <h2 className="tituloServico display-5">Serviços</h2>
                 <Swiper
                     slidesPerView={4}
                     pagination={{ clickable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
                     breakpoints={{
                         0: { slidesPerView: 1},
                         320: { slidesPerView: 1 },
@@ -64,7 +87,7 @@ function Home() {
                     {dataSlideServicos.map((item) => (
                         <SwiperSlide key={item.id} style={{ display: 'flex', justifyContent: 'center' }}>
                             <Card className={"cardServico"}>
-                                <Card.Img className="imgCard" src={item.image}/>
+                                <Card.Img className="imgCard" src={item.image} alt={item.alt} />
                                 <Card.Body className="bodyCard">
                                     <Card.Title className="mb-3 titleCard">{item.title}</Card.Title>
                                 </Card.Body>
@@ -74,10 +97,10 @@ function Home() {
                 </Swiper>
             </Container>
 
-
+            <hr className={"linha"}/>
 
             {/* SOBRE NOS */}
-            <Container className="secaoSobreNos">
+            <Container className="secaoSobreNos"  data-aos="fade-up" style={{borderLeft: "2px solid #dcdcdc", borderRight: "2px solid #dcdcdc"}}>
                 <Row className="justify-content-center " >
                     <Col xs={10} sm={9} md={7} lg={6} xl={4} xxl={4} className="mb-3 mx-auto mx-md-5">
                         <h2 className="mb-3 mt-4 display-5 tituloSobreNos">Sobre Nós</h2>
@@ -93,9 +116,57 @@ function Home() {
                     </Col>
                     <Col xs={9} sm={8} md={6} lg={4} xl={4} xxl={3}>
                         <img src={LogoPreta} className="logoPreta" alt="servico01" />
-                        <img src={ImagemBiaDelefrate} alt="Descrição" className="img-fluid imagemBia" />
+                        <img src={ImagemBiaDelefrate} alt="Imagem da Bia Delefrate" className="img-fluid imagemBia" />
                     </Col>
                 </Row>
+            </Container>
+
+
+            <hr className={"linha mt-5"}/>
+
+
+
+
+
+            {/* AVALIAÇÕES */}
+            <Container className="mt-5" data-aos="fade-up" style={{borderLeft: "2px solid #dcdcdc", borderRight: "2px solid #dcdcdc"}}>
+                <h2 className="display-5 mb-5 tituloAvaliacao">
+                    O que dizem nossas clientes
+                </h2>
+
+                <Swiper
+                    slidesPerView={4}
+
+                    pagination={{ clickable: true }}
+
+                    breakpoints={{
+                        0: { slidesPerView: 1, spaceBetween: 15 },
+                        320: { slidesPerView: 1, spaceBetween: 15 },
+                        768: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 10 },
+                        1440: { slidesPerView: 4, spaceBetween: 40 },
+                    }}
+                >
+                    {dataSlideComentarios.map((comentario) => (
+                        <SwiperSlide key={comentario.id} className="d-flex justify-content-center">
+                            <Card className="cardComentario">
+                                <Card.Body>
+                                    <Card.Text className="text-muted">
+                                        {comentario.comentario}
+                                    </Card.Text>
+                                    <div className="d-flex align-items-center mt-3">
+                                        <div>
+                                            <h5 className="mb-0">{comentario.nome}</h5>
+                                            <p className="sub-info mb-0">Cliente Verificada</p>
+                                            <p className="mt-0">{comentario.estrela}</p>
+
+                                        </div>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </Container>
 
 

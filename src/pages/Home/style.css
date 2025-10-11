@@ -4,16 +4,21 @@
 }
 .cardInicio .card-title{
     font-family: 'Playfair Display', serif;
+
+}
+.cardCentral{
+
 }
 .cardInicio .card-text{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.05rem;
 }
 .imagemSalao {
-    max-height: 80vh;
-    min-height: 70vh;
-    filter: brightness(70%);
-    object-fit: cover;  object-position: top center;
+    max-height: 85vh;
+    min-height: 75vh;
+    filter: brightness(30%);
+    object-fit: cover;
+    object-position: center center;
 }
 .btn_inicio {
     background-color: rgba(255, 255, 255, 0.1);
@@ -138,4 +143,70 @@
     .secaoSobreNos{
         padding-top: 0;
     }
+}
+
+
+
+
+
+.tituloAvaliacao {
+    font-family: 'Playfair Display', serif;
+    color: #ada8a8;
+    text-align: center;
+}
+
+.cardComentario {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 300px;
+    width: 100%;
+}
+
+.cardComentario .card-text {
+    color: #343a40 !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cardComentario h5 {
+    font-weight: 700;
+    color: #495057 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cardComentario .sub-info {
+    font-size: 0.85rem;
+    color: #000000;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .cardComentario {
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Outros */
+.linha {
+    border-bottom: 2px solid #d1cccc !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
 }
