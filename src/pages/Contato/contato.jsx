@@ -4,7 +4,7 @@ function Contato() {
 
     return (
         <>
-        <div className={"eu"}>Pagina Contato</div>
+
         </>
     )
 }

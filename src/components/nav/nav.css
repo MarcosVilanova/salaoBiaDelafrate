@@ -51,7 +51,7 @@
     box-shadow: none;
 }
 .btn_toggle:not(.collapsed) .navbar-toggler-icon {
-    background-image: url('src/assets/btnToggleX.png');
+    background-image: url('../../assets/Icones&Logo/btnToggleX.png');
     width: 35px;
     filter: invert(1) !important;
 }

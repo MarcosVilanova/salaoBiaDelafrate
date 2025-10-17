@@ -20,6 +20,7 @@ function Produtos() {
 
     return (
         <>
+
 <section className="container">
     <h2  className='tituloProduto' display-5>Produtos</h2>
   <Row className='justify-content-center'>
@@ -32,6 +33,9 @@ function Produtos() {
     ))}
   </Row>
 </section>
+=======
+
+
         </>
     )
 }

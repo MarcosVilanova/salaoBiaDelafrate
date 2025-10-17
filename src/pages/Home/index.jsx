@@ -1,175 +1,230 @@
-// ESTILOS
+// ========================== ESTILOS =============================
 import './style.css';
+// ========================== IMAGENS =============================
+import imagemSalao from "../../assets/Fundos/texturaFundo01.webp";
+import ImagemBiaDelefrate from "../../assets/Fundos/ImagemBiaDelefrate.webp";
+import LogoPreta from "../../assets/Icones&Logo/LogoPreta.png";
+import {dataSlideServicos, dataTransformacao, dataSlideComentarios} from "./data";
+// ======================== BIBLIOTECAS ===========================
+import {Button, Card, Row, Col, Container} from "react-bootstrap";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Link} from "react-router-dom";
+import {useEffect} from "react";
+// Animações e Swiper
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {Navigation, Pagination} from "swiper/modules";
 
-// IMAGENS
-import servico01 from "../../assets/servico01.jpg";
-import servico02 from "../../assets/servico02.jpg";
-import servico03 from "../../assets/servico03.jpg";
-import servico04 from "../../assets/servico04.jpg";
-import fundo from "../../assets/texturaFundo01.jpg";
-import ImagemBiaDelefrate from "../../assets/ImagemBiaDelefrate.jpg";
-import Logo2 from "../../assets/LogoPreta.png";
-
-// BIBLIOTECAS
-import { useState } from "react";
-import { Button, Card } from "react-bootstrap";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
-
-// COMPONENTE
 function Home() {
-    const [showInfo, setShowInfo] = useState(false);
 
-    const dataSlide = [
-        { id: 1, image: servico01, title: "Alisamento" },
-        { id: 2, image: servico02, title: "Corte" },
-        { id: 3, image: servico03, title: "Escova modelada" },
-        { id: 4, image: servico04, title: "Hidratação" },
-    ];
+    useEffect(() => {
+        AOS.init({"duration": 0, "once": true});
+    }, []);
 
     return (
         <>
-            {/* HERO SECTION */}
-            <section className="card bg-dark text-white">
-                <img src={fundo} className="imagemFundo" alt="Fundo"  />
-                <div className="card-img-overlay d-flex flex-column justify-content-center container mt-5">
-                    <h1 className="card-title display-2" >
+            {/* ============================= INICIO ============================= */}
+            <section className="card cardInicio">
+                <img src={imagemSalao} alt="Imagem Salão Bia Delefrate" className="imagemSalao" fetchPriority="high"
+                     width={1200} height={800}/>
+                <div className="container card-img-overlay d-flex flex-column justify-content-center mt-5"
+                     data-aos="fade-right">
+                    <h1 className="card-title display-2">
                         Seu cabelo,<span className="d-block d-md-inline"> sua confiança</span>
                     </h1>
-                    <p className="card-text lead mt-2" style={{ fontSize: "17px" }}>
+                    <p className="card-text mt-2">
                         Excelência em alisamento para um cabelo saudável, brilhante e sem esforço.
                     </p>
-                    <div className="d-flex flex-md-row flex-column gap-2 mt-2">
-                        <Button href="#" target="_blank" className="btn_agendarAgora">
+                    <div className="d-flex flex-md-row flex-column gap-3 mt-2">
+                        <Button
+                            href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio"
+                            target="_blank" className="btn_inicio">
                             Agendar Agora
                         </Button>
-                        <Button as={Link} to="/produtos" className="btn_agendarLS">
+                        <Button as={Link} to="/produtos" className="btn_inicio">
                             Produtos
                         </Button>
-
                     </div>
                 </div>
             </section>
 
-            {/* SLIDER DE SERVIÇOS */}
-            <section className="container py-5">
+
+            {/* ============================= SERVIÇOS ============================= */}
+            <Container className="mt-4 containerServicos" data-aos="fade-up">
                 <h2 className="tituloServico display-5">Serviços</h2>
                 <Swiper
                     slidesPerView={4}
-                    pagination={{ clickable: true }}
+                    pagination={{"clickable": true}}
+                    autoplay={{"delay": 3500, "disableOnInteraction": true}}
+                    lazy={true}
+                    preloadImages={false}
                     breakpoints={{
-                            0: { slidesPerView: 1},
-                                320: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 4 },
+                        0: {"slidesPerView": 1},
+                        768: {"slidesPerView": 2},
+                        995: {"slidesPerView": 3},
+                        1024: {"slidesPerView": 4},
                     }}
                 >
-                    {dataSlide.map((item) => (
-                        <SwiperSlide
-                            key={item.id}
-                            style={{ display: 'flex', justifyContent: 'center', padding: "22" }}
-                        >
-                            <Card
-                                style={{
-                                    width: '16rem',
-                                    height: '400px',
-                                    borderRadius: '4rem',
-                                    overflow: 'hidden',
-                                    border: '2px solid black',
-                                    position: 'relative'
-                                }}
-                            >
-                                <Card.Img
-                                    className="img-fluid"
-                                    src={item.image}
-                                    style={{
-                                        objectFit: "cover",
-                                        height: "100%",
-                                        width: "100%",
-                                    }}
-                                />
-
-                                <Card.Body
-                                    className="text-center d-flex justify-content-center align-items-center flex-column"
-                                    style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        backgroundColor: "rgba(0, 0, 0, 0.4)",
-                                        color: "#fff",
-
-                                    }}
-                                >
-                                    <Card.Title className="mb-3">{item.title}</Card.Title>
+                    {dataSlideServicos.map((item) => (
+                        <SwiperSlide key={item.id} className="swiper-slide-custom">
+                            <Card className="cardServico">
+                                <Card.Img loading="lazy" className="imgCard" src={item.image} alt={item.alt}/>
+                                <Card.Body className="bodyCard">
+                                    <Card.Title className="mb-3 titleCard">{item.title}</Card.Title>
                                 </Card.Body>
                             </Card>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </section>
+            </Container>
 
 
+            <hr className="linha"/>
 
 
-
-
-
-
-            <section className="container py-5">
-                <Row className="justify-content-center" >
-
-
-                    <Col
-                        md={5}
-                        className="mb-3 mx-3 mx-md-5"
-                    >
-                        <h2 className="mb-3 mt-4 display-5 sobre">Sobre Nós</h2>
-
+            {/* SOBRE NÓS */}
+            <Container className="secaoSobreNos" data-aos="fade-up"
+                       style={{"borderLeft": "2px solid #dcdcdc", "borderRight": "2px solid #dcdcdc"}}>
+                <Row className="justify-content-center">
+                    <Col xs={10} sm={9} md={7} lg={6} xl={4} xxl={4} className="mb-3 mx-auto mx-md-5">
+                        <h2 className="mb-3 mt-4 display-5 tituloSobreNos">Sobre Nós</h2>
+                        <p className="textSobreNos">
+                            O Bia Delefrate Liso Perfeito nasceu de um propósito: transformar não só cabelos, mas também
+                            a autoestima e a confiança de cada mulher que passa por aqui.
+                            Mais do que um salão de beleza, somos um espaço de cuidado, escuta e transformação onde cada
+                            detalhe é pensado com carinho, desde o atendimento até o resultado final no espelho.
+                            A trajetória da Bia sempre foi guiada pelo amor em realçar a beleza natural de cada cliente,
+                            respeitando o tempo, o tipo e a saúde dos fios.
+                            Com anos de experiência em alisamentos capilares, ela desenvolveu um olhar sensível e
+                            técnico que valoriza o que há de mais bonito em cada mulher: sua essência.
+                            Aqui, acreditamos que beleza é leveza.
+                            Por isso, cada serviço é feito com produtos seguros, técnicas modernas e um toque pessoal
+                            que faz toda diferença para que você se sinta confiante, linda e acolhida em cada visita.
+                            Bia Delefrate Liso Perfeito: um espaço onde o cuidado é verdadeiro e a transformação começa
+                            de dentro pra fora.
+                        </p>
                     </Col>
 
-
-                    <Col xs={9} sm={6} md={4}>
-                        <img src={Logo2} className="sla" alt="servico01" />
-                        <img src={ImagemBiaDelefrate} alt="Descrição" className="img-fluid imagemBia" />
+                    <Col xs={9} sm={8} md={6} lg={4} xl={4} xxl={3}>
+                        <img src={LogoPreta} loading="lazy" className="logoPreta" alt="servico01"/>
+                        <img src={ImagemBiaDelefrate} loading="lazy" alt="Imagem da Bia Delefrate" className="img-fluid imagemBia"/>
                     </Col>
-
                 </Row>
-            </section>
+            </Container>
+
+            <hr className="linha mt-5"/>
 
 
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
-            <div><br/></div>
+            {/* ANTES E DEPOIS */}
+            <Container
+                className="mt-4"
+                style={{
+                    "paddingBottom": '20px',
+                    "borderLeft": "2px solid #dcdcdc",
+                    "borderRight": "2px solid #dcdcdc"
+                }}
+                data-aos="fade-up"
+            >
+                <h2 className="tituloAntesDepois display-5">Antes e Depois</h2>
+
+                <Swiper
+                    slidesPerView={4}
+                    pagination={{"clickable": true}}
+                    autoplay={{"delay": 3000, "disableOnInteraction": false}}
+                    breakpoints={{
+                        0: {"slidesPerView": 1},
+                        768: {"slidesPerView": 2},
+                        995: {"slidesPerView": 3},
+                        1024: {"slidesPerView": 4},
+                    }}
+                >
+                    {dataTransformacao.map((item) => (
+                        <SwiperSlide key={item.id} className="swiperSlideExterno">
+                            <Card className="cardAntesDepois">
+
+                                {/* SWIPER INTERNO PARA AS IMAGENS */}
+                                <Swiper
+                                    className="swiperInterno"
+                                    modules={[Navigation, Pagination]}
+                                    slidesPerView={1}
+                                    navigation
+                                    pagination={{"clickable": true}}
+                                    style={{"height": '100%', "width": '100%'}}
+                                >
+                                    {item.images.map((img) => (
+                                        <SwiperSlide key={item.id}>
+                                            <Card className="cardAntesDepois">
+                                                <div className="imgContainer">
+                                                    <Card.Img
+                                                        className="imgCardAntesDepois"
+                                                        loading="lazy"
+                                                        src={img.src}
+                                                        alt={`Transformação ${img.title}`}
+                                                    />
+                                                    <div className="imgTitleFixed">{img.title}</div>
+                                                </div>
+                                            </Card>
+                                        </SwiperSlide>
+
+
+                                    ))}
+                                </Swiper>
+
+                                <Card.Body className="bodyCardAntesDepois">
+                                    <Card.Title className="titleCardAntesDepois">{item.title}</Card.Title>
+                                </Card.Body>
+                            </Card>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </Container>
+
+            <hr className="linha mt-5"/>
+
+
+            {/* AVALIAÇÕES */}
+            <Container className="mt-5" data-aos="fade-up"
+                       style={{"borderLeft": "2px solid #dcdcdc", "borderRight": "2px solid #dcdcdc"}}>
+                <h2 className="display-5 mb-5 tituloAvaliacao">O que dizem nossas clientes</h2>
+                <Swiper
+                    slidesPerView={4}
+                    pagination={{"clickable": true}}
+                    breakpoints={{
+                        0: {"slidesPerView": 1, "spaceBetween": 15},
+                        320: {"slidesPerView": 1, "spaceBetween": 15},
+                        768: {"slidesPerView": 2, "spaceBetween": 20},
+                        1024: {"slidesPerView": 3, "spaceBetween": 10},
+                        1440: {"slidesPerView": 4, "spaceBetween": 40},
+                    }}
+                >
+                    {dataSlideComentarios.map((comentario) => (
+                        <SwiperSlide key={comentario.id} className="d-flex justify-content-center align-items-stretch">
+                            <Card className="cardComentario">
+                                <Card.Body>
+                                    <div className="d-flex justify-content-end mb-2">
+                                        <span
+                                            className="text-warning h4 rating-star">{comentario.estrela.repeat(5)}</span>
+                                    </div>
+                                    <Card.Text className="text-muted">{comentario.comentario}</Card.Text>
+                                    <div className="d-flex align-items-center mt-3">
+                                        <div>
+                                            <h3 className="mb-0">{comentario.nome}</h3>
+                                            <p className="sub-info mb-0 text-success">Cliente Verificada</p>
+                                        </div>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </Container>
+
+            <br/><br/><br/><br/><br/><br/><br/>
         </>
+
+
     );
+
 }
 
 export default Home;
