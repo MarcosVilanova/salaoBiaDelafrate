@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 // Estilos e imagem
 import "./nav.css";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Icones&Logo/Logo.png";
 
 function NavComponent() {
     return (

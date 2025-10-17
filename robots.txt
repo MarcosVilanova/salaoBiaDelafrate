@@ -1,0 +1,3 @@
+# Permitir todos os robôs
+User-agent: *
+Disallow:
