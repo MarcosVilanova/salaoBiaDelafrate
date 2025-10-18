@@ -18,7 +18,7 @@
     max-height: 85vh;
     min-height: 75vh;
     object-fit: cover;
-    object-position: center center;
+    object-position: left center;
 }
 
 .btn_inicio {
@@ -43,17 +43,11 @@
 }
 
 
-/* ============================= INICIO ============================= */
-.containerServicos {
-    padding-bottom: 20px;
-    border-left: 2px solid #dcdcdc;
-    border-right: 2px solid #dcdcdc;
-}
-
+/* ============================= SERVICO ============================= */
 .tituloServico {
     text-align: center;
     padding-bottom: 1rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     font-weight: 500;
     color: #4a4a4a;
     font-family: 'Playfair Display', serif;
@@ -76,6 +70,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border: none !important;
 }
 
 .cardServico .bodyCard {
@@ -87,64 +82,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-/* Swiper - Paginação (SERVIÇOS) */
-.sw bottom: auto
-
-!important
-;
-background-color: transparent
-
-;
-margin-top:
-
-5
-px
-
-;
-}
-
-.swiper-pagination-bullet {
-    background-color: #555555 !important;
-    opacity: 0.7 !important;
-    width: 12px;
-    height: 12px;
-    v margin: 0 6px !important;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #000000 !important;
-    opacity: 1 !important;
-    transform: scale(1.3);
-}
-
-.swiper-slide-custom {
-    display: flex;
-    justify-content: center;
 }
 
 
-/* ==============================
-   SEÇÃO SOBRE NÓS
-============================== */
-.secaoSobreNos {
-    padding-top: 3rem;
-}
-
-.imagemBia {
-    border-radius: 5%;
-    border: 2px solid rgba(0, 0, 0);
-}
-
-.logoPreta {
-    width: 170px;
-    display: flex;
-    padding-bottom: 1.5rem;
-    justify-self: center;
-}
+/* ============================= SOBRE NOS ============================= */
 
 .tituloSobreNos {
     text-align: center;
@@ -154,31 +95,35 @@ px
     font-family: 'Playfair Display', serif;
 }
 
+.imagemBia {
+    border-radius: 7%;
+    border: 2px solid rgba(0, 0, 0, 0.76);
+}
+
+.logoPreta {
+    width: 170px;
+    display: flex;
+    padding-bottom: 1.5rem;
+    justify-self: center;
+}
+
 .textSobreNos {
     color: #000000;
     font-family: 'Open Sans', sans-serif;
-/ font-size: 1 rem;
+    font-size: 1rem;
     line-height: 1.8;
     text-align: justify;
     margin-top: 1rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .textSobreNos {
         font-size: 0.9rem !important;
         line-height: 1.6;
     }
-
-    .secaoSobreNos {
-        padding-top: 0;
-    }
 }
 
-
-/* ==============================
-   SEÇÃO ANTES E DEPOIS
-============================== */
+/* ============================= ANTES / DEPOIS ============================= */
 .tituloAntesDepois {
     text-align: center;
     padding: 1rem 0;
@@ -186,62 +131,70 @@ px
     color: #4a4a4a;
     font-family: 'Playfair Display', serif;
 }
-
 .cardAntesDepois {
-    width: 16rem;
+    width: 100%;
+    max-width: 16rem;
     height: 400px;
-    border-radius: 2rem;
+    border-radius: 4rem;
     overflow: hidden;
     border: 2px solid black;
-    position: relative;
 }
-
 .imgCardAntesDepois {
-    height: 100% !important;
-    width: 100% !important;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(60%) !important;
-}
-
-.bodyCardAntesDepois {
-    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    border: none !important;
+}
+.titulImg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     color: #fff;
+    font-size: 1rem;
     display: flex;
+    align-items: flex-end;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .swiperInterno {
-    height: 100% !important;
-    width: 100% !important;
-    color: white !important;
+    height: 100%;
+    width: 100%;
 }
 
-.swiperSlideInterno {
-    height: 100% !important;
-    color: white !important;
-}
-
-.cardAntesDepois .swiper-button-prev,
-.cardAntesDepois .swiper-button-next {
-    color: #fff;
+.swiperInterno .swiper-button-prev,
+.swiperInterno .swiper-button-next {
+    color: #ffffff;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
 }
 
+/* ============================= COMENTARIOS ============================= */
 
-/* ==============================
-   SEÇÃO COMENTÁRIOS
-============================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .tituloAvaliacao {
     font-family: 'Playfair Display', serif;
     color: #ada8a8;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -282,6 +235,7 @@ px
     line-height: 1;
     display: block;
     font-family: 'Georgia', serif;
+    top: 0 !important;
 }
 
 .cardComentario .sub-info {
@@ -289,89 +243,55 @@ px
     color: #000000;
 }
 
-/* Responsividade */
-@media (min-width: 768px) {
-    .cardComentario {
-        height: 320px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+/* GLOBAIS ======================================================*/
+
+.linhaVertical {
+    border-left: 2px solid #dcdcdc;
+    border-right: 2px solid #dcdcdc;
 }
-
-@media (max-width: 768px) {
-    .cardComentario {
-        height: auto;
-    }
-}
-
-.swiper-slide {
-    display: flex !important;
-    justify-content: center;
-    align-items: stretch;
-}
-
-
-/* ==============================
-   OUTROS
-============================== */
-.linha {
+.linhaHorizonal {
     border-bottom: 2px solid #d1cccc !important;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }
 
-/* Swiper - Paginação Geral */
+
+/* CONFIGURAÇÃO PADRÃO DO SWIPER BULLET ======================================================*/
 .swiper-pagination {
     position: relative !important;
     bottom: auto !important;
     background-color: transparent;
     margin-top: 5px;
 }
-
 .swiper-pagination-bullet {
-    background-color: #eb0101 !important;
+    background-color: #4f4c4c !important;
     opacity: 0.7 !important;
     width: 12px;
     height: 12px;
     margin: 0 6px !important;
     transition: background-color 0.3s, transform 0.3s;
 }
-
 .swiper-pagination-bullet-active {
     background-color: #000000 !important;
     opacity: 1 !important;
     transform: scale(1.3);
 }
 
-
-.imgContainer {
-    position: relative;
-    width: 100%;
-    height: 100%;
+/* CENTRALIZA OS COMPONENTS SWIPER*/
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
 }
 
-.imgCardAntesDepois {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none !important;
-}
 
-/* título fixo sobre a imagem */
-.imgTitleFixed {
-    position: absolute;
-    bottom: 0; /* fica na parte inferior */
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: transparent; /* fundo semi-transparente */
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1rem;
 
-    backdrop-filter: blur(9px);
-    border-top: 2px solid black;
-}
-
-.swiperInterno {
-    background-color: rebeccapurple;
-
-}

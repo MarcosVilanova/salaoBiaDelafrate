@@ -13,19 +13,20 @@ import {useEffect} from "react";
 // Animações e Swiper
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {Navigation, Pagination} from "swiper/modules";
+import {Navigation, Pagination, Autoplay} from "swiper/modules";
 
 function Home() {
 
-    useEffect(() => {
-        AOS.init({"duration": 0, "once": true});
-    }, []);
 
+    useEffect(() => {
+        AOS.init({"duration": 21200, "once": true});
+    }, []);
     return (
         <>
             {/* ============================= INICIO ============================= */}
             <section className="card cardInicio">
-                <img src={imagemSalao} alt="Imagem Salão Bia Delefrate" className="imagemSalao" fetchPriority="high"
+                <img src={imagemSalao} alt="Imagem Salão Bia Delefrate" className="imagemSalao"
+                     fetchPriority="high"
                      width={1200} height={800}/>
                 <div className="container card-img-overlay d-flex flex-column justify-content-center mt-5"
                      data-aos="fade-right">
@@ -50,7 +51,7 @@ function Home() {
 
 
             {/* ============================= SERVIÇOS ============================= */}
-            <Container className="mt-4 containerServicos" data-aos="fade-up">
+            <Container className="mt-4 linhaVertical" data-aos="fade-up">
                 <h2 className="tituloServico display-5">Serviços</h2>
                 <Swiper
                     slidesPerView={4}
@@ -60,14 +61,14 @@ function Home() {
                     preloadImages={false}
                     breakpoints={{
                         0: {"slidesPerView": 1},
-                        768: {"slidesPerView": 2},
-                        995: {"slidesPerView": 3},
-                        1024: {"slidesPerView": 4},
+                        576: {"slidesPerView": 2},
+                        768: {"slidesPerView": 3},
+                        1200: {"slidesPerView": 4},
                     }}
                 >
                     {dataSlideServicos.map((item) => (
-                        <SwiperSlide key={item.id} className="swiper-slide-custom">
-                            <Card className="cardServico">
+                        <SwiperSlide key={item.id}>
+                            <Card className="cardServico ">
                                 <Card.Img loading="lazy" className="imgCard" src={item.image} alt={item.alt}/>
                                 <Card.Body className="bodyCard">
                                     <Card.Title className="mb-3 titleCard">{item.title}</Card.Title>
@@ -79,112 +80,105 @@ function Home() {
             </Container>
 
 
-            <hr className="linha"/>
+            <hr className="linhaHorizonal"/>
 
 
-            {/* SOBRE NÓS */}
-            <Container className="secaoSobreNos" data-aos="fade-up"
-                       style={{"borderLeft": "2px solid #dcdcdc", "borderRight": "2px solid #dcdcdc"}}>
+            {/* ============================= SOBRE NOS ============================= */}
+            <Container className="linhaVertical" data-aos="fade-up">
                 <Row className="justify-content-center">
                     <Col xs={10} sm={9} md={7} lg={6} xl={4} xxl={4} className="mb-3 mx-auto mx-md-5">
                         <h2 className="mb-3 mt-4 display-5 tituloSobreNos">Sobre Nós</h2>
                         <p className="textSobreNos">
-                            O Bia Delefrate Liso Perfeito nasceu de um propósito: transformar não só cabelos, mas também
+                            O Bia Delefrate Liso Perfeito nasceu de um propósito: transformar não só cabelos, mas
+                            também
                             a autoestima e a confiança de cada mulher que passa por aqui.
-                            Mais do que um salão de beleza, somos um espaço de cuidado, escuta e transformação onde cada
+                            Mais do que um salão de beleza, somos um espaço de cuidado, escuta e transformação onde
+                            cada
                             detalhe é pensado com carinho, desde o atendimento até o resultado final no espelho.
-                            A trajetória da Bia sempre foi guiada pelo amor em realçar a beleza natural de cada cliente,
+                            A trajetória da Bia sempre foi guiada pelo amor em realçar a beleza natural de cada
+                            cliente,
                             respeitando o tempo, o tipo e a saúde dos fios.
                             Com anos de experiência em alisamentos capilares, ela desenvolveu um olhar sensível e
                             técnico que valoriza o que há de mais bonito em cada mulher: sua essência.
                             Aqui, acreditamos que beleza é leveza.
-                            Por isso, cada serviço é feito com produtos seguros, técnicas modernas e um toque pessoal
-                            que faz toda diferença para que você se sinta confiante, linda e acolhida em cada visita.
-                            Bia Delefrate Liso Perfeito: um espaço onde o cuidado é verdadeiro e a transformação começa
+                            Por isso, cada serviço é feito com produtos seguros, técnicas modernas e um toque
+                            pessoal
+                            que faz toda diferença para que você se sinta confiante, linda e acolhida em cada
+                            visita.
+                            Bia Delefrate Liso Perfeito: um espaço onde o cuidado é verdadeiro e a transformação
+                            começa
                             de dentro pra fora.
                         </p>
                     </Col>
 
                     <Col xs={9} sm={8} md={6} lg={4} xl={4} xxl={3}>
-                        <img src={LogoPreta} loading="lazy" className="logoPreta" alt="servico01"/>
-                        <img src={ImagemBiaDelefrate} loading="lazy" alt="Imagem da Bia Delefrate" className="img-fluid imagemBia"/>
+                        <img src={LogoPreta} loading="lazy" className="logoPreta" alt="Logo Salao Bia Delefrate"/>
+                        <img src={ImagemBiaDelefrate} loading="lazy" alt="Imagem da Bia Delefrate"
+                             className="img-fluid imagemBia"/>
                     </Col>
                 </Row>
             </Container>
 
-            <hr className="linha mt-5"/>
+
+            <hr className="linhaHorizonal"/>
 
 
-            {/* ANTES E DEPOIS */}
-            <Container
-                className="mt-4"
-                style={{
-                    "paddingBottom": '20px',
-                    "borderLeft": "2px solid #dcdcdc",
-                    "borderRight": "2px solid #dcdcdc"
-                }}
-                data-aos="fade-up"
-            >
+            {/* ============================= ANTES / DEPOIS ============================= */}
+
+            <Container className="linhaVertical" data-aos="fade-up">
                 <h2 className="tituloAntesDepois display-5">Antes e Depois</h2>
 
                 <Swiper
+                    modules={[Pagination]}
                     slidesPerView={4}
-                    pagination={{"clickable": true}}
-                    autoplay={{"delay": 3000, "disableOnInteraction": false}}
+                    spaceBetween={30}
+                    pagination={{clickable: true}}
                     breakpoints={{
-                        0: {"slidesPerView": 1},
-                        768: {"slidesPerView": 2},
-                        995: {"slidesPerView": 3},
-                        1024: {"slidesPerView": 4},
+                        0: {slidesPerView: 1},
+                        768: {slidesPerView: 2},
+                        995: {slidesPerView: 3},
+                        1200: {slidesPerView: 4},
                     }}
+                    className="swiperExterno"
                 >
                     {dataTransformacao.map((item) => (
-                        <SwiperSlide key={item.id} className="swiperSlideExterno">
-                            <Card className="cardAntesDepois">
+                        <SwiperSlide key={item.id}>
+                            <Card className="cardAntesDepois ">
 
-                                {/* SWIPER INTERNO PARA AS IMAGENS */}
                                 <Swiper
-                                    className="swiperInterno"
-                                    modules={[Navigation, Pagination]}
                                     slidesPerView={1}
                                     navigation
-                                    pagination={{"clickable": true}}
-                                    style={{"height": '100%', "width": '100%'}}
+                                    pagination={{clickable: true}}
+                                    className="swiperInterno"
                                 >
-                                    {item.images.map((img) => (
-                                        <SwiperSlide key={item.id}>
-                                            <Card className="cardAntesDepois">
-                                                <div className="imgContainer">
-                                                    <Card.Img
-                                                        className="imgCardAntesDepois"
-                                                        loading="lazy"
-                                                        src={img.src}
-                                                        alt={`Transformação ${img.title}`}
-                                                    />
-                                                    <div className="imgTitleFixed">{img.title}</div>
-                                                </div>
-                                            </Card>
+                                    {item.images.map((img, index) => (
+                                        <SwiperSlide key={index}>
+
+                                            <Card.Img
+                                                src={img.src}
+                                                alt={"Card Antes/Depois"}
+                                                className="imgCardAntesDepois"
+                                                loading="lazy"
+                                            />
+                                            <div className="titulImg">
+                                                {img.title}
+                                            </div>
+
                                         </SwiperSlide>
-
-
                                     ))}
                                 </Swiper>
-
-                                <Card.Body className="bodyCardAntesDepois">
-                                    <Card.Title className="titleCardAntesDepois">{item.title}</Card.Title>
-                                </Card.Body>
                             </Card>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </Container>
 
-            <hr className="linha mt-5"/>
+
+            <hr className="linhaHorizonal"/>
 
 
             {/* AVALIAÇÕES */}
-            <Container className="mt-5" data-aos="fade-up"
-                       style={{"borderLeft": "2px solid #dcdcdc", "borderRight": "2px solid #dcdcdc"}}>
+            <Container className="mt-5 linhaVertical" data-aos="fade-up">
                 <h2 className="display-5 mb-5 tituloAvaliacao">O que dizem nossas clientes</h2>
                 <Swiper
                     slidesPerView={4}
@@ -198,7 +192,8 @@ function Home() {
                     }}
                 >
                     {dataSlideComentarios.map((comentario) => (
-                        <SwiperSlide key={comentario.id} className="d-flex justify-content-center align-items-stretch">
+                        <SwiperSlide key={comentario.id}
+                                     className="d-flex justify-content-center align-items-stretch">
                             <Card className="cardComentario">
                                 <Card.Body>
                                     <div className="d-flex justify-content-end mb-2">

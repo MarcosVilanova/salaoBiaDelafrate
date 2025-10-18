@@ -1,21 +1,17 @@
-
-.tituloProdutor{
+.SecaoProdutos {
+    background-color: #000000; /* fundo preto base */
+}
+.tituloPageProdutos {
     font-family: Playfair Display, serif;
-    padding-bottom: 3rem;
-    padding-top: 7rem;
+    padding-top: 4rem;
     text-align: center;
-    font-size: 4rem;
+    font-weight: 500;
+    color: #ffffff;
 }
 
-.imgProdutor{
+.produtoCard {
     width: 100%;
-    height: 700px;
     border-radius: 2rem !important;
-    object-fit: cover;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    border: 3px solid black;
-  }
-
+    overflow: hidden;
+    border: none !important;
+}

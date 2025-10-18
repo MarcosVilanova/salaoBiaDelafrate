@@ -1,7 +1,7 @@
 // React Router
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 // Bootstrap
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import {Navbar, Container, Nav, Button} from "react-bootstrap";
 // Estilos e imagem
 import "./nav.css";
 import Logo from "../../assets/Icones&Logo/Logo.png";
@@ -12,7 +12,7 @@ function NavComponent() {
             <Container>
                 {/* Logo */}
                 <Navbar.Brand as={NavLink} to="/">
-                    <img src={Logo} alt="Logo" className="ms-2 ms-md-0" style={{ height: "70px" }}/>
+                    <img src={Logo} alt="Logo" className="ms-2 ms-md-0" style={{height: "70px"}}/>
                 </Navbar.Brand>
 
                 {/* Botão do menu mobile */}
@@ -24,15 +24,17 @@ function NavComponent() {
                         <Nav.Link as={NavLink} to="/" end>
                             Home
                         </Nav.Link>
-                        <Nav.Link as={NavLink} to="/contato">
-                            Contato
-                        </Nav.Link>
                         <Nav.Link as={NavLink} to="/produtos">
                             Produtos
                         </Nav.Link>
+                        <Nav.Link as={NavLink} to="/contato">
+                            Contato
+                        </Nav.Link>
 
                         {/* Botão Agendar */}
-                        <Button href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" className="ms-md-4 btn_agendar">
+                        <Button
+                            href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio"
+                            target="_blank" className="ms-md-4 btn_agendar">
                             Agendar
                         </Button>
                     </Nav>
