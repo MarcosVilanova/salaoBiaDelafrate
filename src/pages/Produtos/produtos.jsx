@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col, Card, Container} from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
 import "./produtos.css";
 /*IMPORT IMAGES*/
 import produto1 from "../../assets/Produtos/produto1.webp";

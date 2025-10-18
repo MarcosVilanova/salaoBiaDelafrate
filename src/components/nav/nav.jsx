@@ -1,7 +1,7 @@
 // React Router
 import {NavLink} from "react-router-dom";
 // Bootstrap
-import {Navbar, Container, Nav, Button} from "react-bootstrap";
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
 // Estilos e imagem
 import "./nav.css";
 import Logo from "../../assets/Icones&Logo/Logo.png";

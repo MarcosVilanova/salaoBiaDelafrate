@@ -50,30 +50,30 @@ const dataTransformacao = [
     {
         id: 1,
         images: [
-            { src: depois01, title: "Depois" },
-            { src: antes01, title: "Antes" },
+            {src: depois01, title: "Depois"},
+            {src: antes01, title: "Antes"},
 
         ],
     },
     {
         id: 2,
         images: [
-            { src: depois02, title: "Depois" },
-            { src: antes02, title: "Antes" },
+            {src: depois02, title: "Depois"},
+            {src: antes02, title: "Antes"},
         ],
     },
     {
         id: 3,
         images: [
-            { src: depois03, title: "Depois" },
-            { src: antes03, title: "Antes" },
+            {src: depois03, title: "Depois"},
+            {src: antes03, title: "Antes"},
         ],
     },
     {
         id: 4,
         images: [
-            { src: depois04, title: "Depois" },
-            { src: antes04, title: "Antes" },
+            {src: depois04, title: "Depois"},
+            {src: antes04, title: "Antes"},
         ],
     },
 ];

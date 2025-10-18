@@ -44,14 +44,6 @@
 
 
 /* ============================= SERVICO ============================= */
-.tituloServico {
-    text-align: center;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    font-weight: 500;
-    color: #4a4a4a;
-    font-family: 'Playfair Display', serif;
-}
 
 .cardServico {
     width: 16rem;
@@ -87,14 +79,6 @@
 
 /* ============================= SOBRE NOS ============================= */
 
-.tituloSobreNos {
-    text-align: center;
-    padding-bottom: 1rem;
-    font-weight: 500;
-    color: #4a4a4a !important;
-    font-family: 'Playfair Display', serif;
-}
-
 .imagemBia {
     border-radius: 7%;
     border: 2px solid rgba(0, 0, 0, 0.76);
@@ -124,13 +108,7 @@
 }
 
 /* ============================= ANTES / DEPOIS ============================= */
-.tituloAntesDepois {
-    text-align: center;
-    padding: 1rem 0;
-    font-weight: 500;
-    color: #4a4a4a;
-    font-family: 'Playfair Display', serif;
-}
+
 .cardAntesDepois {
     width: 100%;
     max-width: 16rem;
@@ -139,12 +117,14 @@
     overflow: hidden;
     border: 2px solid black;
 }
+
 .imgCardAntesDepois {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border: none !important;
 }
+
 .titulImg {
     position: absolute;
     bottom: 0;
@@ -173,41 +153,14 @@
 
 /* ============================= COMENTARIOS ============================= */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tituloAvaliacao {
-    font-family: 'Playfair Display', serif;
-    color: #ada8a8;
-    font-weight: 500;
-    text-align: center;
-}
-
 .cardComentario {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
-    padding: 10px;
+    padding: 0 10px 5px 10px;
     background-color: #fff;
     max-width: 300px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 320px;
 }
 
@@ -228,31 +181,17 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.cardComentario .card-text::before {
-    content: "“";
-    font-size: 4rem;
+.aspas {
+    font-size: 3rem;
     color: #ccc;
-    line-height: 1;
-    display: block;
     font-family: 'Georgia', serif;
-    top: 0 !important;
+
 }
 
 .cardComentario .sub-info {
     font-size: 0.85rem;
-    color: #000000;
+    color: #000000 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* GLOBAIS ======================================================*/
 
@@ -260,11 +199,18 @@
     border-left: 2px solid #dcdcdc;
     border-right: 2px solid #dcdcdc;
 }
+
 .linhaHorizonal {
     border-bottom: 2px solid #d1cccc !important;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }
 
+.titulo {
+    text-align: center;
+    font-weight: 500;
+    color: #4a4a4a;
+    font-family: 'Playfair Display', serif;
+}
 
 /* CONFIGURAÇÃO PADRÃO DO SWIPER BULLET ======================================================*/
 .swiper-pagination {
@@ -273,6 +219,7 @@
     background-color: transparent;
     margin-top: 5px;
 }
+
 .swiper-pagination-bullet {
     background-color: #4f4c4c !important;
     opacity: 0.7 !important;
@@ -281,6 +228,7 @@
     margin: 0 6px !important;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 .swiper-pagination-bullet-active {
     background-color: #000000 !important;
     opacity: 1 !important;
