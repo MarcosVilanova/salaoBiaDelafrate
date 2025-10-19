@@ -1,5 +1,5 @@
 // ========================== ESTILOS =============================
-import "./style.css";
+
 
 // ========================== IMAGENS =============================
 import imagemSalao from "../../assets/Fundos/texturaFundo01.webp";
@@ -30,6 +30,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 register();
+
+import "./style.css";
 
 function Home() {
   useEffect(() => {
