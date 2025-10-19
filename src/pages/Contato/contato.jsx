@@ -1,12 +1,7 @@
-import './contato.css'
+import "./contato.css";
 
 function Contato() {
-
-    return (
-        <>
-
-        </>
-    )
+  return <></>;
 }
 
-export default Contato
+export default Contato;

@@ -1,17 +1,19 @@
 .SecaoProdutos {
-    background-color: #000000; /* fundo preto base */
+  background-color: #000000; /* fundo preto base */
 }
 .tituloPageProdutos {
-    font-family: Playfair Display, serif;
-    padding-top: 4rem;
-    text-align: center;
-    font-weight: 500;
-    color: #ffffff;
+  font-family:
+    Playfair Display,
+    serif;
+  padding-top: 4rem;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .produtoCard {
-    width: 100%;
-    border-radius: 2rem !important;
-    overflow: hidden;
-    border: none !important;
+  width: 100%;
+  border-radius: 2rem !important;
+  overflow: hidden;
+  border: none !important;
 }
