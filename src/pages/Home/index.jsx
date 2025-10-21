@@ -4,7 +4,7 @@
 // ========================== IMAGENS =============================
 import imagemSalao from "../../assets/Fundos/texturaFundo01.png";
 import ImagemBiaDelefrate from "../../assets/Fundos/ImagemBiaDelefrate.webp";
-import LogoPreta from "../../assets/Icones&Logo/LogoPreta.png";
+import LogoPreta from "../../assets/IconeeLogo/LogoPreta.png";
 
 import {dataSlideComentarios, dataSlideServicos, dataTransformacao,} from "./data";
 
