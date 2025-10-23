@@ -4,6 +4,7 @@ import servico01 from "../../assets/ServicosIMG/servico01.webp";
 import servico02 from "../../assets/ServicosIMG/servico02.webp";
 import servico03 from "../../assets/ServicosIMG/servico03.webp";
 import servico04 from "../../assets/ServicosIMG/servico04.webp";
+import servico05 from "../../assets/ServicosIMG/servico05.webp";
 
 // Antes e Depois
 import antes01 from "../../assets/Antes&Depois/antes01.webp";
@@ -30,6 +31,8 @@ const dataSlideServicos = [{
     id: 3, image: servico03, title: "Escova modelada", alt: "Serviço de escova modelada capilar profissional",
 }, {
     id: 4, image: servico04, title: "Hidratação", alt: "Serviço de hidratação capilar profissional",
+},{
+    id: 5, image: servico05, title: "Alisamento + Corte", alt: "Serviço de hidratação capilar profissional",
 },];
 
 // --------- Antes e Depois ---------
