@@ -9,7 +9,9 @@ const Footer = () => {
       <Container>
         <Row className="py-5 align-items-center">
           <Col xs={12} md={4} className=" mb-3 ">
-            <img src={Logo} alt="Logo Bia Delefrate" className="logo" />
+              <NavLink to="/">
+                  <img src={Logo} alt="Logo Bia Delefrate" className="logo" />
+              </NavLink>
           </Col>
           <Col xs={12} md={4} className="d-flex justify-content-center mb-3">
             <ul className="links d-flex flex-column flex-md-row gap-md-4 ">
@@ -22,7 +24,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <NavLink to="/" className="footer-link">
+                <NavLink to="/contato" className="footer-link">
                   Localização
                 </NavLink>
               </li>
