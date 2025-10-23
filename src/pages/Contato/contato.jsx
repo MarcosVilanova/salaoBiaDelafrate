@@ -1,7 +1,56 @@
-import "./contato.css";
+import './contato.css';
+import { Col, Container, Row } from "react-bootstrap";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import {FaMapMarkerAlt} from "react-icons/fa";
+
+
 
 function Contato() {
-  return <></>;
+    return (
+        <Container className="py-5">
+            <h2 className="mt-5 mb-5 display-5 text-center tituloContato">
+                Entre em Contato Conosco
+            </h2>
+
+            <Row className="justify-content-center align-items-start gap-4">
+                <Col xs={12} sm={10} md={7} lg={6} className="map-container">
+                <FaMapMarkerAlt className="iconLocalizacao"/>
+                    <h3>Localização</h3>
+                    <p>Rua dos Palmares, n55 - Bairro: Valéria</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.063610180505!2d-48.604236099999994!3d-20.5445781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb85e6e99c3a19%3A0xcbbb86266a1eebc4!2sBia%20Delefrate%20Liso%20Perfeito!5e0!3m2!1spt-BR!2sbr!4v1760659759124!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="350"
+                        style={{ border: 0, borderRadius: '12px' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Mapa"
+                    ></iframe>
+                </Col>
+
+
+                <Col xs={12} sm={10} md={5} lg={4} className="d-flex flex-column align-items-center justify-content-center">
+                    <a
+                        href="https://wa.me/5517988245969"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="BtnContato mb-3 mt-5 d-flex align-items-center justify-content-center text-decoration-none">
+                         <FaWhatsapp className="me-2" />WhatsApp
+                </a>
+
+                    <a
+                        href="https://www.instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="BtnContato d-flex align-items-center justify-content-center text-decoration-none"
+                    >
+                        <FaInstagram className="me-2" /> Instagram
+                    </a>
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default Contato;
