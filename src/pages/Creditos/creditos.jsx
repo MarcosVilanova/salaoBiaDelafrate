@@ -22,7 +22,7 @@ function Creditos() {
             linkedin: "https://br.linkedin.com/in/marcosvilanova"
         },
         {
-            nome: "Victor Santana",
+            nome: "Victor Santos",
             funcao: "Desenvolvedor",
             contribuicao: "Criação da Página Produtos",
             linkedin: "https://www.linkedin.com/in/victor-hugo-dos-santos-48bb3918a/"
@@ -42,8 +42,8 @@ function Creditos() {
     ];
 
     return (
-        <Container className="my-5 ">
-            <h2 className="titulo display-5">Créditos do Projeto</h2>
+        <Container className="my-5 secaoCreditor container">
+            <h2 className="titulo display-5 mb-5">Créditos do Projeto</h2>
             <Row xs={1} md={2} lg={3} className="g-4">
                 {creditos.map((item, index) => (
                     <Col key={index}>
