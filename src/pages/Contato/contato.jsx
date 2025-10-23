@@ -6,17 +6,17 @@ function Contato() {
     return (
         <Container className="py-5">
             <h2 className="mt-5 display-5 text-center titulo">
-                Entre em Contato Conosco
+                Entre em Contato
             </h2>
 
             <Row className="justify-content-center">
-                <Col xs={12} sm={10} md={7} lg={6} className="d-flex flex-column">
+                <Col xs={10} sm={10} md={7} lg={6} className="d-flex flex-column">
 
                     <a
                         href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="BtnContato mb-3 mt-5 d-flex align-items-center justify-content-center text-decoration-none"
+                        className="BtnContato mb-3 mt-3 d-flex align-items-center justify-content-center text-decoration-none"
                     >
                         <FaWhatsapp className="me-2" />WhatsApp
                     </a>
@@ -38,7 +38,7 @@ function Contato() {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.063610180505!2d-48.604236099999994!3d-20.5445781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb85e6e99c3a19%3A0xcbbb86266a1eebc4!2sBia%20Delefrate%20Liso%20Perfeito!5e0!3m2!1spt-BR!2sbr!4v1760659759124!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="350"
-                        style={{ border: 0, borderRadius: '15px', border: "2px solid black" }}
+                        style={{  borderRadius: '15px', border: "2px solid black" }}
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
