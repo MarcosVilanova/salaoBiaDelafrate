@@ -12,6 +12,7 @@ import Home from "./pages/Home/index.jsx";
 import Contato from "./pages/Contato/contato.jsx";
 import Produtos from "./pages/Produtos/produtos.jsx";
 import "./index.css";
+import Creditos from "./pages/Creditos/creditos.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
                 <Route path="/" element={<Home/>}/>
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/produtos" element={<Produtos/>}/>
+                <Route path="/creditos" element={<Creditos/>}/>
             </Routes>
         <Footer/>
         </BrowserRouter>

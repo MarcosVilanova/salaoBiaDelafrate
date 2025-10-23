@@ -46,11 +46,12 @@ const Footer = () => {
             md={4}
             className="d-flex flex-column justify-content-center align-items-center align-items-md-end"
           >
-            <p className="subtitulo mb-1">Projeto de Extensão - UniBarretos</p>
-            <p className="creditos mb-0">
-              &copy; {new Date().getFullYear()} UniBarretos. Todos os direitos
-              reservados.
-            </p>
+              <p className="subtitulo mb-1">Projeto de Extensão - UniBarretos</p>
+              <p className="creditos mb-0">
+                  &copy; {new Date().getFullYear()} Bia Delafrate Liso Perfeito. Todos os direitos reservados.
+                  Desenvolvido por <a href="/Creditos" className="linkCreditos">Equipe Code</a>
+              </p>
+
           </Col>
         </Row>
       </Container>

@@ -30,7 +30,7 @@ function NavComponent() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Nav.Link as={NavLink} to="/" end>
-              Home
+              Inicio
             </Nav.Link>
             <Nav.Link as={NavLink} to="/produtos">
               Produtos
