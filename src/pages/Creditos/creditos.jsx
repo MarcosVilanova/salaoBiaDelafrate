@@ -1,6 +1,6 @@
 import { Card, Col, Row, Container } from "react-bootstrap";
 import { FaLinkedin } from "react-icons/fa";
-import './Creditos.css';
+import './creditos.css';
 
 function Creditos() {
     const creditos = [
@@ -18,7 +18,7 @@ function Creditos() {
         {
             nome: "Marcos Vilanova",
             funcao: "Desenvolvedor",
-            contribuicao: "Criação da seção Inicio e NavBar component",
+            contribuicao: "Criação da seção Inicio e NavBar, deploy do projeto, revisão de código e merge de pull requests",
             linkedin: "https://br.linkedin.com/in/marcosvilanova"
         },
         {
