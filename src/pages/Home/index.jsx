@@ -78,11 +78,14 @@ function Home() {
             <Swiper
                 slidesPerView={4}
                 pagination={{clickable: true}}
-                autoplay={{delay: 5000, disableOnInteraction: true}}
+
                 lazy={true}
                 preloadImages={false}
                 breakpoints={{
-                    0: {slidesPerView: 1}, 576: {slidesPerView: 2}, 768: {slidesPerView: 3}, 1200: {slidesPerView: 4},
+                    0: {slidesPerView: 1},
+                    576: {slidesPerView: 2, spaceBetween: 10},
+                    992: {slidesPerView: 3, spaceBetween: 10},
+                    1200: {slidesPerView: 4, spaceBetween: 10},
                 }}
             >
                 {dataSlideServicos.map((item) => (<SwiperSlide key={item.id}>

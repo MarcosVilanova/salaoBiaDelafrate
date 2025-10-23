@@ -31,7 +31,7 @@ const dataSlideServicos = [{
     id: 3, image: servico03, title: "Escova modelada", alt: "Serviço de escova modelada capilar profissional",
 }, {
     id: 4, image: servico04, title: "Hidratação", alt: "Serviço de hidratação capilar profissional",
-},{
+}, {
     id: 5, image: servico05, title: "Alisamento + Corte", alt: "Serviço de hidratação capilar profissional",
 },];
 
@@ -46,7 +46,7 @@ const dataTransformacao = [{
     id: 4, images: [{src: depois04, title: "Depois"}, {src: antes04, title: "Antes"},],
 }, {
     id: 5, images: [{src: depois05, title: "Depois"}, {src: antes05, title: "Antes"},],
-},{
+}, {
     id: 5, images: [{src: depois06, title: "Depois"}, {src: antes06, title: "Antes"},],
 },
 

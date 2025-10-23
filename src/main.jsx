@@ -17,15 +17,15 @@ import Creditos from "./pages/Creditos/creditos.jsx";
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
-        <NavComponent/>
-        <ScrollToTop />
+            <NavComponent/>
+            <ScrollToTop/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/produtos" element={<Produtos/>}/>
                 <Route path="/creditos" element={<Creditos/>}/>
             </Routes>
-        <Footer/>
+            <Footer/>
         </BrowserRouter>
     </StrictMode>,
 );

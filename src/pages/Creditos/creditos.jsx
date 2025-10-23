@@ -1,5 +1,5 @@
-import { Card, Col, Row, Container } from "react-bootstrap";
-import { FaLinkedin } from "react-icons/fa";
+import {Card, Col, Row, Container} from "react-bootstrap";
+import {FaLinkedin} from "react-icons/fa";
 import './creditos.css';
 
 function Creditos() {
@@ -51,12 +51,14 @@ function Creditos() {
                             <Card.Body className="d-flex flex-column justify-content-between">
                                 <div>
                                     <Card.Title className="credit-nome">{item.nome}</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted credit-funcao">{item.funcao}</Card.Subtitle>
+                                    <Card.Subtitle
+                                        className="mb-2 text-muted credit-funcao">{item.funcao}</Card.Subtitle>
                                     <Card.Text className="credit-texto">{item.contribuicao}</Card.Text>
                                 </div>
                                 {item.linkedin && (
-                                    <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                                        <FaLinkedin size={24} />
+                                    <a href={item.linkedin} target="_blank" rel="noopener noreferrer"
+                                       className="linkedin-link">
+                                        <FaLinkedin size={24}/>
                                     </a>
                                 )}
                             </Card.Body>
