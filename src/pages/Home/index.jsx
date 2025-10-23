@@ -78,7 +78,7 @@ function Home() {
             <Swiper
                 slidesPerView={4}
                 pagination={{clickable: true}}
-                autoplay={{delay: 3500, disableOnInteraction: true}}
+                autoplay={{delay: 4000, disableOnInteraction: true}}
                 lazy={true}
                 preloadImages={false}
                 breakpoints={{

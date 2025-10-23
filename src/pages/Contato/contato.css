@@ -1,9 +1,9 @@
 
-.tituloContato{
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-
+.titulo {
+    text-align: center !important;
+    font-weight: 500 !important;
+    color: #4a4a4a !important;
+    font-family: "Playfair Display", serif !important;
 }
 
 .imgSalao{

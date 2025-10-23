@@ -20,7 +20,7 @@ function Produtos() {
   return (
     <section className="SecaoProdutos py-5">
       <Container>
-        <h2 className="tituloPageProdutos display-3 mb-5">Produtos</h2>
+        <h2 className="tituloPageProdutos display-4 mb-5">Produtos</h2>
         <Row className="justify-content-center g-4">
           {dataProdutos.map((item) => (
             <Col key={item.id} xs={10} sm={6} md={5} lg={4} xl={3}>
