@@ -1,3 +1,6 @@
-# Permitir todos os robôs
+# Permitir todos os robôs indexarem o site
 User-agent: *
 Disallow:
+
+# Localização do sitemap
+Sitemap: https://biadelefrate.vercel.app/sitemap.xml
