@@ -1,4 +1,3 @@
-// ========================== ESTILOS =============================
 
 
 // ========================== IMAGENS =============================
@@ -36,7 +35,7 @@ function Home() {
 
     return (<>
         {/* ============================= INICIO ============================= */}
-        <section className="card cardInicio">
+        <section className="card cardInicio" >
             <img
                 src={imagemSalao}
                 alt="Imagem Salão Bia Delefrate"
@@ -73,12 +72,11 @@ function Home() {
         </section>
 
         {/* ============================= SERVIÇOS ============================= */}
-        <Container className="mt-4 linhaVertical" data-aos="fade-up">
+        <Container className="linhaVertical" data-aos="fade-up" >
             <h2 className="titulo  mb-4 display-5">Serviços</h2>
             <Swiper
                 slidesPerView={4}
                 pagination={{clickable: true}}
-
                 lazy={true}
                 preloadImages={false}
                 breakpoints={{
@@ -111,15 +109,7 @@ function Home() {
         {/* ============================= SOBRE NOS ============================= */}
         <Container className="linhaVertical" data-aos="fade-up">
             <Row className="justify-content-center">
-                <Col
-                    xs={10}
-                    sm={9}
-                    md={7}
-                    lg={6}
-                    xl={4}
-                    xxl={4}
-                    className="mb-3 mx-auto mx-md-5"
-                >
+                <Col xs={10} sm={9} md={7} lg={6} xl={4} xxl={4} className="mb-3 mx-auto mx-md-5">
                     <h2 className="mb-3 mt-4 display-5 titulo">Sobre Nós</h2>
                     <p className="textSobreNos">
                         O Bia Delefrate Liso Perfeito nasceu de um propósito: transformar
@@ -140,19 +130,9 @@ function Home() {
                         fora.
                     </p>
                 </Col>
-
                 <Col xs={9} sm={8} md={6} lg={4} xl={4} xxl={3}>
-                    <img
-                        src={LogoPreta}
-                        loading="lazy"
-                        className="logoPreta"
-                        alt="Logo Salao Bia Delefrate"
-                    />
-                    <img
-                        src={ImagemBiaDelefrate}
-                        loading="lazy"
-                        alt="Imagem da Bia Delefrate"
-                        className="img-fluid imagemBia"
+                    <img src={LogoPreta} loading="lazy" className="logoPreta" alt="Logo Salao Bia Delefrate"/>
+                    <img src={ImagemBiaDelefrate} loading="lazy" alt="Imagem da Bia Delefrate" className="img-fluid imagemBia"
                     />
                 </Col>
             </Row>
@@ -161,10 +141,8 @@ function Home() {
         <hr className="linhaHorizonal"/>
 
         {/* ============================= ANTES / DEPOIS ============================= */}
-
         <Container className="linhaVertical" data-aos="fade-up">
             <h2 className="titulo  mb-4 display-5">Antes e Depois</h2>
-
             <Swiper
                 modules={[Pagination]}
                 slidesPerView={4}
@@ -202,7 +180,7 @@ function Home() {
 
         {/* AVALIAÇÕES */}
         <Container className="linhaVertical mb-5" data-aos="fade-up">
-            <h2 className="display-5 mt-4 mb-4 titulo">
+            <h2 className="display-5  mb-4 titulo">
                 O que dizem nossas clientes
             </h2>
             <Swiper
@@ -237,7 +215,6 @@ function Home() {
                 </SwiperSlide>))}
             </Swiper>
         </Container>
-
     </>);
 }
 

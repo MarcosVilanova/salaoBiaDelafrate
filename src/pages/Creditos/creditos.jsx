@@ -8,7 +8,6 @@ function Creditos() {
             nome: "Bia Delafrate",
             funcao: "Proprietária",
             contribuicao: "Fornecimento de imagens e conteúdo do salão",
-            destaque: true,
         },
         {
             nome: "Universidade Barretos",
@@ -18,7 +17,7 @@ function Creditos() {
         {
             nome: "Marcos Vilanova",
             funcao: "Desenvolvedor",
-            contribuicao: "Criação da seção Inicio e NavBar, deploy do projeto, revisão de código e merge de pull requests",
+            contribuicao: "Criação da seção Inicio e NavBar, deploy do projeto e revisão de código",
             linkedin: "https://br.linkedin.com/in/marcosvilanova"
         },
         {
@@ -47,7 +46,7 @@ function Creditos() {
             <Row xs={1} md={2} lg={3} className="g-4">
                 {creditos.map((item, index) => (
                     <Col key={index}>
-                        <Card className={`h-100 shadow-sm credit-card ${item.destaque ? 'destaque' : ''}`}>
+                        <Card className={`h-100 shadow-sm credit-card `}>
                             <Card.Body className="d-flex flex-column justify-content-between">
                                 <div>
                                     <Card.Title className="credit-nome">{item.nome}</Card.Title>

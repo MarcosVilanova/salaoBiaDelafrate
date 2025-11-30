@@ -2,9 +2,9 @@
 .credit-card {
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     border-radius: 15px;
-    border: none;
+    border: 1px solid black !important;
     padding: 1rem;
-    background-color: rgba(14, 118, 168, 0.14);
+    background-color: rgba(0, 0, 0, 0.14);
 }
 
 .titulo {
@@ -15,10 +15,6 @@
     padding-top: 4rem;
 }
 
-.destaque {
-    border: 2px solid #f39c12;
-    background-color: #fff7e6;
-}
 
 .credit-nome {
     font-weight: 700;
@@ -40,9 +36,14 @@
 }
 
 .linkedin-link {
-    color: #0e76a8;
+    color: #1d1c1c;
     margin-top: 10px;
     display: inline-block;
     transition: transform 0.2s, color 0.2s;
+}
+
+.linkedin-link:hover {
+    color: #0e76a8;
+
 }
 
