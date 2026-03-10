@@ -42,6 +42,17 @@ function Produtos() {
                     ))}
                 </Row>
 
+
+
+             <div style={{display: "flex", justifyContent: "center"}}>
+                 <Button
+                     href="https://dottovip.com.br/biadelefratelisoperfeito"
+                     target="_blank"
+                     className="btn_inicio  align-items-center mt-4"
+                 >
+                     Agendar Agora
+                 </Button>
+             </div>
             </Container>
 
 
