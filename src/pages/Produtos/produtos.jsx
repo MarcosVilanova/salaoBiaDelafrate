@@ -46,11 +46,11 @@ function Produtos() {
 
              <div style={{display: "flex", justifyContent: "center"}}>
                  <Button
-                     href="https://dottovip.com.br/biadelefratelisoperfeito"
+                     href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20vi%20os%20produtos%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es."
                      target="_blank"
                      className="btn_inicio  align-items-center mt-4"
                  >
-                     Agendar Agora
+                     Saber Mais
                  </Button>
              </div>
             </Container>
