@@ -1,53 +1,58 @@
-# SALAOBIADELEFRATE
+# 💇‍♀️ Salão Bia Delefrate
 
-## Sobre o projeto
-O **SALAOBIADELEFRATE** é um site institucional desenvolvido para um salão de beleza real, com foco em apresentar serviços, produtos e facilitar o contato com clientes.
+## 📌 Sobre o projeto
+O **Salão Bia Delefrate** é um site institucional desenvolvido para um salão de beleza real, com o objetivo de fortalecer sua presença digital e facilitar o acesso dos clientes às principais informações.
 
-O projeto foi desenvolvido como parte de um trabalho acadêmico e atualmente está em uso real, sendo utilizado como presença digital do salão e aparecendo em buscas online.
+Criado inicialmente como um projeto acadêmico, o sistema evoluiu para um ambiente de produção, sendo atualmente utilizado como canal oficial do salão e indexado em mecanismos de busca.
+
 ---
 
-## Objetivo
-O principal objetivo do projeto foi criar uma plataforma moderna, responsiva e alinhada com a identidade visual do salão, proporcionando:
+## 🎯 Objetivo
+Desenvolver uma aplicação web moderna, responsiva e alinhada à identidade visual do salão, proporcionando:
 
-- Melhor visibilidade online  
-- Facilidade de acesso às informações  
-- Experiência agradável para o usuário  
+- Maior visibilidade online  
+- Acesso rápido e intuitivo às informações  
+- Melhor experiência do usuário (UX)  
+- Credibilidade digital para o negócio  
+
+Além disso, o projeto teve como foco a consolidação de boas práticas em desenvolvimento front-end.
+
 ---
 
-## Tecnologias utilizadas
+## 🚀 Tecnologias utilizadas
 - React  
 - Bootstrap  
 - CSS  
-- Swiper  
-- AOS (Animate On Scroll)
+- Swiper (carrossel interativo)  
+- AOS – Animate On Scroll 
+
 ---
 
-## Funcionalidades
-- Página inicial com apresentação do salão  
+## ⚙️ Funcionalidades
+- Página inicial institucional  
 - Seção de produtos  
 - Área de contato  
-- Layout totalmente responsivo (mobile, tablet e desktop)  
-- Carrossel interativo com Swiper  
-- Animações suaves com AOS  
+- Layout 100% responsivo (mobile, tablet e desktop)  
+- Carrossel dinâmico com Swiper  
+- Animações de interface com AOS  
+
 ---
 
-## Diferenciais
-- Design moderno e alinhado com a identidade visual do salão  
-- Interface intuitiva e agradável  
-- Responsividade bem trabalhada para diferentes dispositivos  
-- Código organizado, limpo e dividido em componentes  
-- Projeto em uso real  
+## 🎨 Diferenciais
+- Interface moderna e alinhada à identidade visual do salão  
+- Responsividade em múltiplos dispositivos  
+- Código limpo, organizado e componentizado  
+- Aplicação em uso real 
+
 ---
 
-## Acesso ao projeto
+## 🌐 Acesse o projeto
 🔗 https://biadelefrate.vercel.app/
+
 ---
 
-## Autor
-Projeto desenvolvido majoritariamente por mim, sendo responsável por aproximadamente **90% da implementação**, incluindo estrutura, layout e funcionalidades.
----
+## 📊 Status do projeto
+- ✅ Em produção  
+- 🚀 Ativo e em uso  
 
-## Status do projeto
-✅ Em uso  
-🚀 Ativo e disponível online  
 ---
