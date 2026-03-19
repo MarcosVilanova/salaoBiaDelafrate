@@ -41,7 +41,7 @@ Além disso, o projeto teve como foco a consolidação de boas práticas em dese
 ## 🎨 Diferenciais
 - Interface moderna e alinhada à identidade visual do salão  
 - Responsividade em múltiplos dispositivos  
-- Código limpo, organizado e componentizado  
+- Código organizado com uso de componentização (Navbar e Footer)  
 - Aplicação em uso real 
 
 ---
