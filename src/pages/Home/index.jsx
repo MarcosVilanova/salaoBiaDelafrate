@@ -1,7 +1,7 @@
 
 
 // ========================== IMAGENS =============================
-import imagemSalao from "../../assets/Fundos/texturaFundo01.png";
+import imagemSalao from "../../assets/Fundos/fundonovo.jpeg";
 import ImagemBiaDelefrate from "../../assets/Fundos/ImagemBiaDelefrate.jpeg";
 import LogoPreta from "../../assets/IconeeLogo/LogoPreta.png";
 

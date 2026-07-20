@@ -43,9 +43,17 @@ function Footer() {
                     className="d-flex flex-column justify-content-center text-xl-end text-center">
                         <p className="subtitulo mb-1">Projeto de Extensão - UniBarretos</p>
                         <p className="creditos mb-0">
-                            &copy; 2025 Bia Delafrate Liso Perfeito. Todos os direitos reservados.
+                            &copy; 2025 Bia Delafrate Liso Perfeito.
+                            <br/>
                             Desenvolvido por{" "}
-                            <NavLink to="/Creditos" className="linkCreditos">Equipe Code</NavLink>
+                            <a
+                                href="https://www.linkedin.com/in/marcosvilanova/"
+                                className="linkCreditos"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Marcos Vilanova
+                            </a>
                         </p>
                     </Col>
 
