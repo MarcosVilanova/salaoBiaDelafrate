@@ -7,18 +7,18 @@ import servico04 from "../../assets/ServicosIMG/servico04.webp";
 import servico05 from "../../assets/ServicosIMG/servico05.webp";
 
 // Antes e Depois
-import antes01 from "../../assets/Antes&Depois/antes01.webp";
-import depois01 from "../../assets/Antes&Depois/depois01.webp";
-import antes02 from "../../assets/Antes&Depois/antes02.webp";
-import depois02 from "../../assets/Antes&Depois/depois02.webp";
-import antes03 from "../../assets/Antes&Depois/antes03.webp";
-import depois03 from "../../assets/Antes&Depois/depois03.webp";
-import antes04 from "../../assets/Antes&Depois/antes04.webp";
-import depois04 from "../../assets/Antes&Depois/depois04.webp";
-import antes05 from "../../assets/Antes&Depois/antes05.webp";
-import depois05 from "../../assets/Antes&Depois/depois05.webp";
-import antes06 from "../../assets/Antes&Depois/antes06.webp";
-import depois06 from "../../assets/Antes&Depois/depois06.webp";
+import antes01 from "../../assets/Antes_Depois/antes01.webp";
+import depois01 from "../../assets/Antes_Depois/depois01.webp";
+import antes02 from "../../assets/Antes_Depois/antes02.webp";
+import depois02 from "../../assets/Antes_Depois/depois02.webp";
+import antes03 from "../../assets/Antes_Depois/antes03.webp";
+import depois03 from "../../assets/Antes_Depois/depois03.webp";
+import antes04 from "../../assets/Antes_Depois/antes04.webp";
+import depois04 from "../../assets/Antes_Depois/depois04.webp";
+import antes05 from "../../assets/Antes_Depois/antes05.webp";
+import depois05 from "../../assets/Antes_Depois/depois05.webp";
+import antes06 from "../../assets/Antes_Depois/antes06.webp";
+import depois06 from "../../assets/Antes_Depois/depois06.webp";
 
 // =========================== DADOS ===========================
 
@@ -47,7 +47,7 @@ const dataTransformacao = [{
 }, {
     id: 5, images: [{src: depois05, title: "Depois"}, {src: antes05, title: "Antes"},],
 }, {
-    id: 5, images: [{src: depois06, title: "Depois"}, {src: antes06, title: "Antes"},],
+    id: 6, images: [{src: depois06, title: "Depois"}, {src: antes06, title: "Antes"},],
 },
 
 ];
