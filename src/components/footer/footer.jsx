@@ -42,19 +42,22 @@ function Footer() {
                     <Col xs={10} sm={8} md={6} lg={5} xl={3}
                     className="d-flex flex-column justify-content-center text-xl-end text-center">
                         <p className="subtitulo mb-1">Projeto de Extensão - UniBarretos</p>
+
                         <p className="creditos mb-0">
                             &copy; 2025 Bia Delafrate Liso Perfeito.
-                            <br/>
-                            Desenvolvido por{" "}
+                            <br />
+                            Desenvolvido por Marcos Vilanova
+                            <br />
                             <a
-                                href="https://www.linkedin.com/in/marcosvilanova/"
+                                href="https://wa.me/5575981597736"
                                 className="linkCreditos"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Marcos Vilanova
+                                Precisa de um site? Entre em contato.
                             </a>
                         </p>
+
                     </Col>
 
                 </Row>

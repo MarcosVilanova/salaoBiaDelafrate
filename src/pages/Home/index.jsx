@@ -70,8 +70,8 @@ function Home() {
                         >
                             Orçamento / Duvidas
                         </Button>
-                        <Button as={Link} to="/produtos" className="btn_inicio">
-                            Produtos
+                        <Button as={Link} to="/Contato" className="btn_inicio">
+                            Localização
                         </Button>
                     </div>
                 </div>

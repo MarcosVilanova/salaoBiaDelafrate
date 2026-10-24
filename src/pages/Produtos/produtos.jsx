@@ -9,19 +9,15 @@ import { Card, Col, Container, Row, Button} from "react-bootstrap";
 import "./produtos.css";
 
 // Imagens dos produtos
-const produto1 = new URL("../../assets/Produtos/produto1.jpeg", import.meta.url).href;
 const produto2 = new URL("../../assets/Produtos/produto2.jpeg", import.meta.url).href;
 const produto3 = new URL("../../assets/Produtos/produto3.jpeg", import.meta.url).href;
-const produto4 = new URL("../../assets/Produtos/produto4.jpeg", import.meta.url).href;
 
 // ========================== COMPONENTE ==========================
 function Produtos() {
     // Dados dos produtos
     const dataProdutos = [
-        { id: 1, image: produto1, text: "R$59,90" },
         { id: 2, image: produto2, text: "R$180" },
         { id: 3, image: produto3, text: "R$180" },
-        { id: 4, image: produto4, text: "R$120"},
     ];
 
     return (
@@ -41,9 +37,6 @@ function Produtos() {
                         </Col>
                     ))}
                 </Row>
-
-
-
              <div style={{display: "flex", justifyContent: "center"}}>
                  <Button
                      href="https://wa.me/5517988245969?text=Ol%C3%A1%2C%20vi%20os%20produtos%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es."
@@ -54,8 +47,6 @@ function Produtos() {
                  </Button>
              </div>
             </Container>
-
-
         </section>
     );
 }
